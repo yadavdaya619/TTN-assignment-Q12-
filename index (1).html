@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="form1.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav">
+        <a href="#help">Quick Help</a>
+        <a href="#home">Home</a>
+        <h1>TO THE NEW</h1>
+      </div>
+      <div class="main">
+        <div class="heading">
+          <h1 style="color: white; text-align: left">Bug Report</h1>
+        </div>
+        <div class="form_container">
+          <form action="/action_page.php">
+            <label for="title">Title:*</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              style="height: 35px"
+              required
+            />
+
+            <label for="desc">Description:*</label>
+            <input
+              type="text"
+              id="desc"
+              name="desc"
+              style="height: 80px"
+              required
+            />
+
+            <label for="OS">Operating System</label>
+            <select id="OS" name="OS" style="background-color: #00c9a8">
+              <option value="windows-xp">Windows XP</option>
+              <option value="Windows-10">Windows 10</option>
+              <option value="Ubantu">Ubantu</option>
+            </select>
+
+            <label for="Product">Product:*</label>
+            <select
+              id="Product"
+              name="Product"
+              style="background-color: #00c9a8"
+            >
+              <option value="Formoid">Formoid</option>
+              <option value="iphone">iphone</option>
+              <option value="ipad">ipad</option>
+            </select>
+
+            <label for="version">Version:*</label>
+            <div class="Product">
+              <input type="text" id="version" name="version" required />
+            </div>
+
+            <p>License:</p>
+            <input type="radio" name="license" id="free" />
+            <label for="always" style="margin-right: 35%">Free</label>
+
+            <input type="radio" name="license" id="business" value="business" />
+            <label for="never">Business</label>
+            <br />
+            <p>Severity:*</p>
+
+            <!-- <label for="Severity">Severity:*</label> -->
+            <select
+              id="Severity"
+              name="Severity"
+              style="background-color: #00c9a8"
+            >
+              <option value="Critical" style="color: blue">Critical</option>
+              <option value="Normal">Normal</option>
+              <option value="medium">Medium</option>
+            </select>
+            <p>Attachments</p>
+
+            <div class="attachments">
+              <label for="image_uploads" style="margin-left: 10px"
+                >No file selected</label
+              >
+              <div class="fileattach">
+                <input
+                  type="file"
+                  id="image_uploads"
+                  name="image_uploads"
+                  accept=".jpg, .jpeg, .png"
+                  multiple
+                />
+                <i class="cloud-upload"></i> Choose File
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="send">
+          <input type="submit" value="Send" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
